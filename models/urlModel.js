@@ -1,5 +1,7 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/db');
+// const { Model, DataTypes } = require('sequelize');
+import { Model, DataTypes } from 'sequelize';
+// const sequelize = require('../config/db');
+import sequelize from '../config/db.js'
 
 class Url extends Model {}
 
@@ -19,4 +21,5 @@ Url.init(
     }
 );
 
-module.exports = Url;
+// module.exports = Url;
+export default Url

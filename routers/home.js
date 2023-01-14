@@ -1,6 +1,8 @@
-const express = require('express');
+// const express = require('express');
+import express from "express"
 const router = express.Router();
-const path = require('path')
+// const path = require('path')
+import path from "path"
 
 router.get('/', (req, res) =>{
    const htmlPath= path.join(__dirname, 'public', 'index.html');
@@ -13,4 +15,5 @@ router.get('/', (req, res) =>{
 router.post('/', ()=>{})
 router.delete('/', ()=>{})
 
-module.exports = router;
+// module.exports = router;
+export default router;

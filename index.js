@@ -1,7 +1,10 @@
-const express = require('express');
+// const express = require('express');
+import express from "express"
 const app = express();
-const shorturl = require('./routers/url')
-const homeRoutes = require('./routers/home')
+// const shorturl = require('./routers/url')
+import shorturl from './routers/url.js'
+// const homeRoutes = require('./routers/home')
+import homeRoutes from './routers/home.js'
 
 //middlewares: The role of middleware is to enable and ease access to those back-end resources. Middleware programs will typically provide a messaging service for applications to transfer data, such as simple object access protocol (SOAP), representational state transfer (REST) or JavaScript object notation (JSON).
 //middleware function that called before making the API call
