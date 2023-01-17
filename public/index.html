@@ -14,7 +14,7 @@
                 <button type="submit" class="submit-button btn btn-primary btn-sm">Shorten!</button>
             </form>
         </section>
-        <section class="result-sectin text-center"></section>
+        <section class="result-section text-center"></section>
     </main>
 
 
@@ -36,22 +36,23 @@
                     longUrl: input.value,
                 })
             })
-            .then(response =>{
+            .then((response) =>{
                 if(!response.ok){
                     throw Error(response.statusText);
                 }
+                // console.log(await response.json())
                 return response.json();
             })
             .then(data =>{
-                console.log(data.shorUrl)
+                console.log(data)
 
-                result.insertAdjacentHTML('afterbegin',`
+                result.innerHTML=`
                 <div class="result">
-                    <a target="blank" class="short-url" href="${data.shorUrl}">
-                        ${data.shorUrl}
+                    <a target="blank" class="short-url" href="${data.shortUrl}">
+                        ${data.shortUrl}
                         </a>
                         </div>
-                `)
+                `
             })
             .catch(console.error)
         });

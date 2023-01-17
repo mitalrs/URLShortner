@@ -27,6 +27,7 @@ router.post("/", async (req, res)=>{
             longUrl,
             shortUrl: shortId  
         });
+        console.log(shortId)
         // return res.status(200).send(shortUrl)
          return res.status(200).json({
             status: "ok",
